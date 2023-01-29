@@ -1,0 +1,36 @@
+Day20
+
+1. Pandas에서 각 행을 consecutive order read
+    Pandas, Numpy 등은 벡터 연산을 하는 데 높은 성능
+    행, 열로 순회하면서 단순 반복문으로 처리하면 성능 효과 없음
+
+    (1) itertuples, iterrows
+    - itertuples : iterate over DataFrame as nametuples
+    - iterrows : iterate over DataFrame as (index, Series)
+
+    ex) DataFrame에 age, weight가 있다고 가정
+        for ntp in df.itertuples():
+            ntp.Index, ntp.age, ntp.weight
+
+        for idx, row in df.terrows():
+            idx, row.age, row.weight
+
+        itertuples가 사용법이 간단하고 속도가 훨씬 빠름(추천)
+
+    (2) iteritems, items
+        - 열 단위로 순회하는 함수로 성능과 기능 차이 거의 없음
+
+2. Folium
+    (1) Python에서 Leaflet.js를 이용해서 지리 데이터를 효과적으로 시각화하는 패키지
+    (2) 지도와 좌표값을 이용해서 지도 html 파일을 생성
+    (3) 지도 상에 아이콘 등으로 시각적으로 표현
+    (4) Jupyter notebook에서는 web으로 자동으로 보여지며
+        Pycharm, VS Code, Anaconda같은 IDE( Integrate Development Enviornment )에서는 html로 저장
+
+3. tkinter
+    (1) TCL/Tk를 파이썬에 맞게 wrapping한 GUI 모듈
+    (2) TCL(Tool Command Language)의 약자로 프로그래밍 언어
+        Tk는 크로스플랫폼에 사용되는 GUI
+    (3) 지원되는 위젯이 부족하고 UI가 세련되었거나 예쁜 편이 아님
+    (4) Python 설치 시에 같이 설치됨
+    (5) Python에서 GUI로 가장 유명한 것은 PyQT6

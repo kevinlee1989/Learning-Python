@@ -1,0 +1,105 @@
+Day09
+
+0. Day08 Review
+    List Method
+    - append, insert, extend
+    - pop, remove, index
+    - clear
+
+1. Method 심화
+(1) Set Method
+    1) intersection(비교대상) - 교집합
+        나와 비교대상이 공통으로 가지고 있는 멤버를 구함
+        a.intersection(b) => a와 b의 공통적인 멤버를 구함
+
+    2) union(비교대상) - 합집합
+        나와 비교대상을 합친 전체 멤버를 구함. 중복이 있는 경우는 1개만
+
+    3) difference(비교대상)
+        내 멤버 중에 비교대상에 있는 멤버를 뺀다.
+        a.difference(b)
+
+(2) Dictionary
+    1) keys() : key 목록을 반환
+    2) values() : value 목록을 반환
+    3) items() : key, value 목록을 반환
+    4) get(키값) : 키값에 해당하는 value 반환
+        cf) d[키값], d.get(키값)은 차이가 있음
+
+
+2. String
+    String(문자열)은 배열이 아니면서 배열처럼 쓸 수 있다.
+
+    len('문자열') = 문자 개수
+    len(문자열의 리스트) = 문자열의 개수
+
+    a = 'abcdefg'
+    a[0] = 'a', a[1] = 'b'
+    a[시작값:종료값:증감값] = a의 시작값 인덱스에서 종료값 인덱스 전까지
+                          증감값만큼 뛰어서
+
+3. 집합체 복사하기
+    a = b[1:5] => b의 인덱스 1부터 4까지 복사하기
+    c = d[1:] => d의 인덱스 1부터 끝까지 복사하기
+    e = f[:] => f의 인덱스 처음부터 끝까지 복사하기
+    g = h[::-1] => h의 인덱스 끝에서 처음까지 역순으로 복사하기
+    집합(Set)은 순서라는 개념이 없기 때문에 전체 복사만 가능하다.
+
+4. 사용자 함수(User Function)
+(1) 사용자 함수
+    내장 함수(Built-in Function) : 이미 만들어져 있는 함수
+    사용자 함수(User Function) : 사용자가 직접 만든 함수
+
+
+(2) 사용자 함수 생성 방법
+    def 함수명(전달값):
+        실행문
+        return 결과값
+
+(3) 사용자 함수 호출 방법
+    결과값을 저장할 변수 = 함수명(인수)
+    결과값과 인수는 없을 수도 있음
+
+(4) 함수의 형태
+    1) 인수(X), 결과값(X)
+        def printMessage1():
+            print('Welcome to my house')
+
+    2) 인수(O), 결과값(X)
+        a = 3333
+        printMessage(a) # a = argument
+
+        def printMessage2(message): # message = parameter
+            print(message)
+
+        def printMessage3(message = '입력을 하지 않으셨어요'): # default 값을 정할 수 있다.
+            print(message)
+
+        def printMessage4(message = 'nothing', i = 5): # 두개도 세팅이가능하다!
+            for j in range(i):
+                print(message)  # 만약 아무것도 데이터를 전달하지않으면 없어를 5번을 출력하게된다.
+
+    3) 인수(O), 결과값(O)
+        def getRandomeDice(i=6):
+            r = random.randint(1, i)
+            print('당신의 주사위는', r)
+            return r # 호출한 곳한테 r의 값을 돌려주게된다.
+
+    4) 결과값을 여러 개 반환하는 경우
+        def 함수명(인수):
+            return a, b, c
+
+        d, e, f = 함수명(인수)
+
+    5) 인수의 개수가 정해져 있지 않을 경우우
+        def 함수명(*인수): * 는 인수가 한개이상일 수도 있다는 표현
+
+
+
+
+
+
+
+
+
+

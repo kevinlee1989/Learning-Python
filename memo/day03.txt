@@ -1,0 +1,51 @@
+Day3
+
+1. print 추가(str.format)
+(1) str이 가지고 있는 기능 중 format 함수 써보기
+(2) 파이썬 레퍼런스 사이트
+    1) www.phthon.org 접속
+    2) docs 클릭
+    3) 키워드(format) 검색
+    4) str.format
+    5) Format String Syntax
+    6) Format Examples 클릭
+    7) 예제들 살펴보기
+
+2. 제어문
+    - 프로그래밍 언어에서 실행순서를 변경하거나
+      조건에 따라서 실행해야할 문장을 결정하거나
+      특정한 문장을 반복해야 할 때가 있음
+    - 제어문의 종류
+      조건문, 반복문, 기타제어문
+      조건문 : if, elif, else
+      반복문 : while, for              > cf) C와 Java에는 do-while 문장도 있음.
+      기타 제어문 : break, continue
+
+(1) 조건문
+    - 조건에 따라 다른 것을 구현
+    - 조건에 따라 해야될 일이 다를때 사용
+    - if-elif-elif-......-else #if 뒤에부분은 없을 수도 있다
+
+    if 조건:
+        조건의 결과과 True일 때 실행할 문장
+
+    a = 1
+    if a > 0:
+       print("a는 양수")
+       print("로 판명되었습니다")
+       b = b * 10000
+
+    if 조건1:
+        실행문1
+    elif 조건2: # 조건1은 False이고 조건2가 True이면 실행
+        실행문2
+    else: # 모두 아니면(그외)
+        실행문3
+
+
+
+
+
+
+
+

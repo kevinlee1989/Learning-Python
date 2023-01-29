@@ -1,0 +1,73 @@
+Day4
+
+1. day3 review
+(1) 논리연산자
+    A and B, A or B, not A
+(2) str.format()
+    reference site
+(3) 제어문(Control Statement)
+    1) 조건문
+        if, if-else, if-elif, if-elif-...-else
+
+2. 제어문(2)
+(2) 반복문(loop, iteration, 뻉뻉이)
+    - 어떤 작업을 한 번 이상 반복해서 수행
+    - 동일 작업을 여러 번 반복해서 수행해야 하는데 코딩을 여러 줄 하고 싶지 않을 때
+    - while, for   cf) C, Java : do - while
+
+    1) while
+        - 특정 조건을 만족하는 동안 반복해서 수행
+
+      * 형태
+      while 조건식:
+        조건식이 True일 때 실행할 문장
+
+      * 기본 사용 사례
+      i = 0
+      while i < 10:
+        print(i)
+        i = i + 1
+
+    2) for
+        - 범위나 회수가 정해져 있는 동안 반복해서 수행
+
+        * 형태
+        for 변수 in 집합(떼거지):
+            반복해서 실행할 문장
+
+        * 기본 사용 사례
+        for n in [1,2,3]:
+            print(n)
+        첫 번째는 1, 두 번째는 2, 세 번쨰는 3
+
+        * 참고
+        집합(떼거지) : 문자열(str), 리스트(list), 튜플(tuple), 레인지(range), 세트(set), 딕셔너리(dictionary)
+
+        for s in "문자열집합": #문자열
+            print(s) // 첫번째는 '문' 두번째는 '자' 세번째는 '열'이 들어간다 s가 계속해서 바뀜
+
+        for l in ['첫번째','두번째','세번째']: #리스트
+            print(l)
+
+        vivaldi_season4 = ('Spring','Summer','Fall','Winter') # 튜플 : 수정불가
+        for season in vivaldi_season4:
+            print(season)
+
+        vivaldi_season4 = {'Spring','Summer','Fall','Winter'} # 세트 : 순서 보장 안됨
+        for season in vivaldi_season4:
+            print(season)
+
+        **** 중요해서 어떤 말로도 설명이 부족 > range ****
+        range(초기값, 종료값, 증감값)
+        -초기값부터 종료값까지 증감값만큼 차이를 갖는 그룹
+        -초기값을 생략하면 default 값: 0, 종료값은 생략불가, 증감값을 생략하면 default 값: 1
+        -range(1,5,1) -> 1,2,3,4
+         range(5) -> 0,1,2,3,4
+
+         **** 초고난이도 dict ****
+         - 최근 많이 쓰이는 자료구조형 key, value로 저장하는 방식 cf) REST API
+         person = {'name':'py','age':100} # 중복을 인정하지않고 앞에 데이터를 날려버린다.
+         for item in person:
+            print(item) #이렇게 코딩을 하면 name 그다음에 age 만 나온다, key만 나온다
+            print(person[item])
+            print(person.get(item)) # 이런느낌으로 기억하자
